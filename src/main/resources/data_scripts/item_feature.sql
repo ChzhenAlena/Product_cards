@@ -1,0 +1,22 @@
+INSERT INTO product_feature (product_id, feature)
+VALUES
+    ((SELECT id FROM product WHERE name = 'Apple iPhone 14 Pro'), 'Advanced Camera System'),
+    ((SELECT id FROM product WHERE name = 'Apple iPhone 14 Pro'), 'Powerful Performance'),
+    ((SELECT id FROM product WHERE name = 'Samsung Galaxy S22 Ultra'), 'S Pen Support'),
+    ((SELECT id FROM product WHERE name = 'Samsung Galaxy S22 Ultra'), 'Stunning Display'),
+    ((SELECT id FROM product WHERE name = 'Sony X950H 65-inch 4K HDR LED TV'), 'Advanced Picture Quality'),
+    ((SELECT id FROM product WHERE name = 'Sony X950H 65-inch 4K HDR LED TV'), 'Smart Features'),
+    ((SELECT id FROM product WHERE name = 'Bose QuietComfort 45 Wireless Headphones'), 'Improved Comfort'),
+    ((SELECT id FROM product WHERE name = 'Bose QuietComfort 45 Wireless Headphones'), 'Enhanced Battery Life'),
+    ((SELECT id FROM product WHERE name = 'Dell XPS 17 9710 Laptop'), 'Powerful Specs'),
+    ((SELECT id FROM product WHERE name = 'Dell XPS 17 9710 Laptop'), '17-inch Display'),
+    ((SELECT id FROM product WHERE name = 'Dyson V15 Detect Cordless Vacuum Cleaner'), 'Intelligent Suction'),
+    ((SELECT id FROM product WHERE name = 'Dyson V15 Detect Cordless Vacuum Cleaner'), 'Advanced Filtration'),
+    ((SELECT id FROM product WHERE name = 'Amazon Echo Show 10 (3rd Gen)'), 'Premium Speakers'),
+    ((SELECT id FROM product WHERE name = 'Amazon Echo Show 10 (3rd Gen)'), 'Seamless Alexa Integration'),
+    ((SELECT id FROM product WHERE name = 'GoPro HERO11 Black'), 'Impressive Video Capabilities'),
+    ((SELECT id FROM product WHERE name = 'GoPro HERO11 Black'), 'Advanced Photo Features'),
+    ((SELECT id FROM product WHERE name = 'Logitech MX Master 3S Wireless Mouse'), 'Advanced Productivity Features'),
+    ((SELECT id FROM product WHERE name = 'Logitech MX Master 3S Wireless Mouse'), 'Exceptional Comfort'),
+    ((SELECT id FROM product WHERE name = 'Sony PlayStation 5 Console'), 'Stunning Graphics'),
+    ((SELECT id FROM product WHERE name = 'Sony PlayStation 5 Console'), 'High Performance');

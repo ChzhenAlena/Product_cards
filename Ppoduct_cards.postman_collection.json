@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "07bfa629-42b7-44fc-b149-4cfcbdb60c9f",
+		"name": "Ppoduct_cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32791114"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/products/11977695-515a-4872-b37c-174f04641f01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products",
+								"11977695-515a-4872-b37c-174f04641f01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/products/4b35117e-cad5-47a0-9b92-f67bff4f957d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products",
+								"4b35117e-cad5-47a0-9b92-f67bff4f957d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get with highest rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/products?withHighestRating=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "withHighestRating",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get with highest price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/products?withHighestPrice=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "withHighestPrice",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get with lowest price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/products?withLowestPrice=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "withLowestPrice",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Apple iPhone 13 Pro Max\",\r\n  \"description\": \"The latest flagship iPhone with advanced camera, powerful A15 Bionic chip, and 5G connectivity.\",\r\n  \"price\": 1099.99,\r\n  \"color\": \"Graphite\",\r\n  \"brand\": \"Apple\",\r\n  \"category\": \"Smartphones\",\r\n  \"availability\": true,\r\n  \"available_units\": 250,\r\n  \"rating\": 4.8,\r\n  \"image_urls\": [\r\n    \"https://specials-images.forbesimg.com/imageserve/6321aca5df0a9fa9eee9950b/IMG-2758/960x0.jpg?cropX1=63&cropX2=1519&cropY1=104&cropY2=1074\",\r\n    \"https://www.ixbt.com/img/x780/n1/news/2022/8/6/iouYDdzmovzWwVPzk6awXc_large.jpg\"\r\n  ],\r\n  \"weight\": 238.0,\r\n  \"warranty\": \"1 year limited warranty\",\r\n  \"special_features\": [\r\n    \"Triple-lens camera system\",\r\n    \"Super Retina XDR OLED display\",\r\n    \"Ceramic Shield front\",\r\n    \"A15 Bionic chip\",\r\n    \"5G connectivity\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Apple iPhone 16 Pro Max\",\r\n  \"description\": \"The latest flagship iPhone with advanced camera, powerful A15 Bionic chip, and 5G connectivity.\",\r\n  \"price\": 1099.99,\r\n  \"color\": \"Graphite\",\r\n  \"brand\": \"Apple\",\r\n  \"category\": \"Smartphones\",\r\n  \"availability\": true,\r\n  \"available_units\": 250,\r\n  \"rating\": 4.8,\r\n  \"image_urls\": [\r\n    \"https://amateurphotographer.com/wp-content/uploads/sites/7/2022/10/iPhone14Pro_Product_Shot_001-820px.jpg\"\r\n  ],\r\n  \"weight\": 238.0,\r\n  \"warranty\": \"1 year limited warranty\",\r\n  \"special_features\": [\r\n    \"Triple-lens camera system\",\r\n    \"Super Retina XDR OLED display\",\r\n    \"Ceramic Shield front\",\r\n    \"A15 Bionic chip\",\r\n    \"5G connectivity\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/products/da7a48b6-a1a7-483f-9415-a427190f9743",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products",
+								"da7a48b6-a1a7-483f-9415-a427190f9743"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "get file by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/files/Apple_iPhone_14_Pro_213841.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"files",
+								"Apple_iPhone_14_Pro_213841.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add files",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"dd7f9e66-ab9c-4221-b8d6-76deaa454984\",\r\n    \"imageUrls\": [\"https://www.belconsole.by/pics/items/ps5.jpg\", \"https://cdn.mos.cms.futurecdn.net/vVVviL9q4fhrHWqB4CGMkV-1200-80.jpg\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

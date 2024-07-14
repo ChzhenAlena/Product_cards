@@ -1,0 +1,12 @@
+INSERT INTO product (id, name, brand, model, available_units, weight, rating, category, description, color, price, warranty)
+VALUES
+    (random_uuid(), 'Apple iPhone 14 Pro', 'Apple', 'iPhone 14 Pro', 100, 0.206, 4.8, 'Smartphones', 'The latest flagship iPhone with advanced camera system and powerful performance', 'Space Black', 1099.99, 6),
+    (random_uuid(), 'Samsung Galaxy S22 Ultra', 'Samsung', 'Galaxy S22 Ultra', 80, 0.228, 4.7, 'Smartphones', 'Top-of-the-line Android smartphone with S Pen support and stunning display', 'Burgundy', 1199.99, 6),
+    (random_uuid(), 'Sony X950H 65-inch 4K HDR LED TV', 'Sony', 'X950H', 50, 18.1, 4.6, 'TVs', 'Premium 4K HDR LED TV with advanced picture quality and smart features', 'Black', 1499.99, 6),
+    (random_uuid(), 'Bose QuietComfort 45 Wireless Headphones', 'Bose', 'QuietComfort 45', 120, 0.235, 4.7, 'Headphones', 'Renowned noise-cancelling headphones with improved comfort and battery life', 'Triple Black', 329.99, 12),
+    (random_uuid(), 'Dell XPS 17 9710 Laptop', 'Dell', 'XPS 17 9710', 40, 2.51, 4.8, 'Laptops', 'High-performance Windows laptop with 17-inch display and powerful specs', 'Platinum Silver', 2099.99, 18),
+    (random_uuid(), 'Dyson V15 Detect Cordless Vacuum Cleaner', 'Dyson', 'V15 Detect', 60, 3.0, 4.8, 'Home Appliances', 'Advanced cordless vacuum cleaner with intelligent suction and advanced filtration', 'Nickel/Bright Copper', 699.99,12),
+    (random_uuid(), 'Amazon Echo Show 10 (3rd Gen)', 'Amazon', 'Echo Show 10', 75, 2.9, 4.5, 'Smart Home', 'Intelligent smart display with premium speakers and seamless Alexa integration', 'Charcoal', 249.99, 12),
+    (random_uuid(), 'GoPro HERO11 Black', 'GoPro', 'HERO11 Black', 90, 0.153, 4.7, 'Cameras', 'Latest flagship action camera with impressive video and photo capabilities', 'Black', 549.99, 18),
+    (random_uuid(), 'Logitech MX Master 3S Wireless Mouse', 'Logitech', 'MX Master 3S', 100, 0.141, 4.6, 'Computer Accessories', 'Premium wireless mouse with advanced features for productivity and comfort', 'Pale Grey', 99.99, 6),
+    (random_uuid(), 'Sony PlayStation 5 Console', 'Sony', 'PlayStation 5', 30, 4.5, 4.7, 'Gaming Consoles', 'Latest generation of Sony''s flagship gaming console with stunning graphics and performance', 'White', 499.99, 12);
