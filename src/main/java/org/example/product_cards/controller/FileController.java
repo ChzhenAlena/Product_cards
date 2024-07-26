@@ -2,7 +2,6 @@ package org.example.product_cards.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.product_cards.exception.ErrorResponse;
-import org.example.product_cards.exception.ProductNotFoundException;
 import org.example.product_cards.exception.ReadingImageException;
 import org.example.product_cards.exception.WritingImageException;
 import org.example.product_cards.model.AddImagesRequest;
@@ -41,7 +40,7 @@ public class FileController {
   }
 
   @ExceptionHandler({ReadingImageException.class, WritingImageException.class})
-  public ResponseEntity<ErrorResponse> handleImageProcessingExceptions(ProductNotFoundException ex) {
+  public ResponseEntity<ErrorResponse> handleImageProcessingExceptions(Exception ex) {
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
     return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
   }

@@ -72,7 +72,7 @@ public class ProductController {
   }
 
   @ExceptionHandler(ProductFilteringException.class)
-  public ResponseEntity<ErrorResponse> handleProductNotFoundException(ProductFilteringException ex) {
+  public ResponseEntity<ErrorResponse> handleProductFilteringException(ProductFilteringException ex) {
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.CONFLICT.value(), ex.getMessage());
     return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
   }
