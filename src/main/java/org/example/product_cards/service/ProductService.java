@@ -21,17 +21,20 @@ public class ProductService {
   private final ProductRepository productRepository;
   private final ProductMapper mapper;
 
+  @Transactional(readOnly = true)
   public ProductResponse getById(UUID id) {
     ProductEntity productEntity = productRepository.findById(id)
         .orElseThrow(ProductNotFoundException::new);
     return mapper.toProductResponse(productEntity);
   }
 
+  @Transactional(readOnly = true)
   public List<ProductResponse> getAll() {
     List<ProductEntity> productEntities = productRepository.findAll();
     return mapper.toResponseList(productEntities);
   }
 
+  @Transactional
   public UUID create(ProductRequest request) {
     List<String> fileNames = fileService.processImages(request.image_urls(), request.name());
 
@@ -59,16 +62,19 @@ public class ProductService {
     productRepository.deleteById(id);
   }
 
+  @Transactional(readOnly = true)
   public List<ProductResponse> getWithHighestRating() {
     List<ProductEntity> productEntities = productRepository.findWithHighestRating();
     return mapper.toResponseList(productEntities);
   }
 
+  @Transactional(readOnly = true)
   public List<ProductResponse> getWithHighestPrice() {
     List<ProductEntity> productEntities = productRepository.findWithHighestPrice();
     return mapper.toResponseList(productEntities);
   }
 
+  @Transactional(readOnly = true)
   public List<ProductResponse> getWithLowestPrice() {
     List<ProductEntity> productEntities = productRepository.findWithLowestPrice();
     return mapper.toResponseList(productEntities);
@@ -81,6 +87,7 @@ public class ProductService {
     productEntity.getPhotos().addAll(imageNames);
   }
 
+  @Transactional(readOnly = true)
   public ProductEntity getProductEntityById(UUID id) {
     return productRepository.findById(id)
         .orElseThrow(ProductNotFoundException::new);
